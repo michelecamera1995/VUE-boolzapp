@@ -42,11 +42,11 @@
                     </div>
                 </div>
                 <input type="text" placeholder="Cerca o inizia una nuova chat!">
-                <div class="users-card">
+                <div class="users-card"v-for="(item,index) in contacts" >
                     <div class="users-card-left">
-                        <img src="img/avatar_3.jpg" alt="">
+                        <img src="img/avatar_1.jpg" alt="">
                         <div>
-                            <h4>nome</h4>
+                            <h4>{{item.name}}</h4>
                             <p>messsaggio inviato</p>
                         </div>
                     </div>

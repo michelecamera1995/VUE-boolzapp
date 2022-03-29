@@ -1,6 +1,6 @@
 console.log("js-ok")
 
-contacts: [
+contacts = [
     {
         name: 'Michele',
         avatar: '_1',
@@ -168,7 +168,7 @@ contacts: [
 const app = new Vue({
     el: '#app',
     data: {
-        contacts,
+        contacts
     },
     methods: {
     }
