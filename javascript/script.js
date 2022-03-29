@@ -171,5 +171,9 @@ const app = new Vue({
         contacts
     },
     methods: {
+        imgURL(nome){
+            return `img/avatar${nome.avatar}.jpg`;
+            
+        },
     }
 });

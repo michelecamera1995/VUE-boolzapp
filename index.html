@@ -44,7 +44,7 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat!">
                 <div class="users-card"v-for="(item,index) in contacts" >
                     <div class="users-card-left">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="imgURL(item)" alt="">
                         <div>
                             <h4>{{item.name}}</h4>
                             <p>messsaggio inviato</p>
