@@ -13,13 +13,16 @@
 </head>
 <body>
 
-<!---->
+<!--Container-->
     <div id="backgroundcontainer">
         <div class="stripgreen"></div>
         
-        <!---->
+        <!--Inizio app-->
 
         <div id="app">
+
+            <!--Colonna sinistra-->
+
             <div id="col-sx">
                 <div class="top-bar brd-rgh">
                     <div class="avatar-user">
@@ -31,10 +34,9 @@
                     <div class="icons">
                         <button><i class="fa-solid fa-circle-notch"></i></button>
                         <button><i class="fa-solid fa-message"></i></button>
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button><i class="fa-solid fa-ellipsis"></i></button>
                     </div>
                 </div>
-
                 <div class="notify-bar">
                     <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
                     <div>
@@ -42,10 +44,20 @@
                         <a href="">Attiva notifiche desktop</a>
                     </div>
                 </div>
-
-                <input type="text">
-                <div class="users-card"></div>
+                <input type="text" placeholder="Cerca o inizia una nuova chat!">
+                <div class="users-card">
+                    <div class="users-card-left">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <h4>nome</h4>
+                            <p>messsaggio inviato</p>
+                        </div>
+                    </div>
+                    <div class="time"><p>12:00</p></div>
+                </div>
             </div>
+
+            <!--Colonna destra-->
 
             <div id="col-dx">
                 <div class="top-bar">
@@ -57,12 +69,16 @@
                         </div>
                     </div>
                     <div class="icons">
-                        <button><i class="fa-solid fa-circle-notch"></i></button>
-                        <button><i class="fa-solid fa-message"></i></button>
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button><i class="fa-solid fa-paperclip"></i></button>
+                        <button><i class="fa-solid fa-ellipsis"></i></button>
                     </div>
-                    </div>
-                    <div class="icons"></div>
+                </div>
+                <div class="chat-container"></div>
+                <div class="send-message-bar">
+                    <div><button><i class="fa-solid fa-face-smile"></i></button></div>
+                    <div><input type="text"placeholder='Scrivi un messaggio!'></div>
+                    <div><button><i class="fa-solid fa-share"></i></button></div>
                 </div>
             </div>
         </div>

@@ -10,6 +10,17 @@ body{
 	background-color: #d8dbd6;
 }
 
+
+* button{
+    padding: 0;
+    border: none;
+    background: none;
+    margin-right: 15px;
+    font-size: 1.3rem;
+    color: lightslategray;
+    cursor: pointer;
+}
+
 #backgroundcontainer{
     height: 100vh;
     width: 100%;
@@ -55,7 +66,6 @@ body{
  .avatar-user {
     display: flex;
     align-items: center;
-
  }
 
  .avatar-user img{
@@ -64,10 +74,6 @@ body{
     margin-left: 3%;
     margin-right: 3%;
  }
-
- .icons{
-     margin-right: 3%;
-}
 
  .notify-bar{
     width: 100%;
@@ -101,6 +107,24 @@ body{
     width: 100%;
     background-color: rgb(255, 0, 0);
     height: 10%;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .users-card-left{
+    display: flex;
+    align-items: center;
+ }
+
+ .users-card img{
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 3%;
+    margin-right: 3%;
+ }
+
+ .time{
+    margin: 2%;
  }
 
 
@@ -108,4 +132,28 @@ body{
     width: 60%;
     background-color: brown;
     height: 100%;
+    display: flex;
+    flex-direction: column;
  }
+
+ .chat-container{
+    height: 100%;
+    background-color: rgb(216, 178, 83);
+    width: 100%;
+ }
+
+ .send-message-bar{
+     display: flex;
+     justify-content: space-around;
+    height: 8%;
+    background-color: white;
+    width: 100%;
+    align-self: flex-end;
+    align-items: center;
+
+ }
+
+ .send-message-bar input{
+    width: 580px;
+    height: 30px;
+}
