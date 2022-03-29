@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="javascript/Framescript.js" defer></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"defer></script>   
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>   
     <script src="javascript/script.js" defer></script>   
 </head>
 <body>
@@ -42,9 +42,9 @@
                     </div>
                 </div>
                 <input type="text" placeholder="Cerca o inizia una nuova chat!">
-                <div class="users-card"v-for="(item,index) in contacts" @click="setActiveUser(index)">
+                <div class="users-card" v-for="(item,index) in contacts" @click="setActiveUser(index)">
                     <div class="users-card-left">
-                        <img :src="imgURL(item)" alt="">
+                        <img :src="imgURL(item)" alt="user img">
                         <div>
                             <h4>{{item.name}}</h4>
                             <p>messsaggio inviato</p>
@@ -59,7 +59,7 @@
             <div id="col-dx">
                 <div class="top-bar">
                     <div class="avatar-user">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img src="img/avatar_1.jpg" alt="user img">
                         <div>
                             <h3>Michele</h3>
                             <p>ultimo accesso alle 12:30</p>
