@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <input type="text" placeholder="Cerca o inizia una nuova chat!">
-                <div class="users-card"v-for="(item,index) in contacts" >
+                <div class="users-card"v-for="(item,index) in contacts" @click="setActiveUser(index)">
                     <div class="users-card-left">
                         <img :src="imgURL(item)" alt="">
                         <div>

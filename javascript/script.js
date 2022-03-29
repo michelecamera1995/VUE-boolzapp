@@ -168,12 +168,16 @@ contacts = [
 const app = new Vue({
     el: '#app',
     data: {
-        contacts
+        contacts,
+        activeUser: null,
     },
     methods: {
         imgURL(nome){
             return `img/avatar${nome.avatar}.jpg`;
-            
+        },
+        setActiveUser(i){
+            this.activeUser = i;
+            console.log(this.activeUser)
         },
     }
 });
