@@ -164,12 +164,12 @@ contacts = [
     }
 ]
 
-
 const app = new Vue({
     el: '#app',
     data: {
         contacts,
         activeUser: null,
+        newListElement:'',
     },
     methods: {
         imgURL(nome){
@@ -179,5 +179,13 @@ const app = new Vue({
             this.activeUser = i;
             console.log(this.activeUser)
         },
+        getLastUserMsg(element){
+            messages = element.messages;
+            messages.forEach(message => {
+            console.log(message.message)
+            });
+            return (messages.length > 0) ?  messages[messages.length -1].message : ' ' ;
+        },
     }
 });
+ 

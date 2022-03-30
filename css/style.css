@@ -10,7 +10,6 @@ body{
 	background-color: #d8dbd6;
 }
 
-
 * button{
     padding: 0;
     border: none;
@@ -28,7 +27,7 @@ body{
 
 #backgroundcontainer{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
  }
  
 .stripgreen{
@@ -131,7 +130,6 @@ body{
     margin: 2%;
  }
 
-
  #col-dx{
     width: 60%;
     background-color: brown;
@@ -144,7 +142,35 @@ body{
     height: 100%;
     background-color: rgb(216, 178, 83);
     width: 100%;
+    display: flex;
  }
+
+ .chat-sx{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.message{
+   padding: 1%;
+   border-radius: 20%;
+   border: 1px solid black;
+}
+
+.sent{
+   margin-top: 5%;
+   margin-left: 8%;
+   align-self: flex-start;
+   background-color: greenyellow;
+}
+
+.received{
+   background-color: white;
+   margin-top: 5%;
+   margin-right: 8%;
+   align-self: flex-end;
+}
 
  .send-message-bar{
      display: flex;
