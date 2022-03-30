@@ -177,12 +177,12 @@ const app = new Vue({
         },
         setActiveUser(i){
             this.activeUser = i;
-            console.log(this.activeUser)
+            //console.log(this.activeUser)
         },
         getLastUserMsg(element){
             messages = element.messages;
             messages.forEach(message => {
-            console.log(message.message)
+            //console.log(message.message)
             });
             return (messages.length > 0) ?  messages[messages.length -1].message : ' ' ;
         },
