@@ -73,9 +73,7 @@
                     </div>
                     <div class="chat-container">
                         <div class="chat-sx" >
-                            <div class="message received">{{contacts[activeUser].messages}}</div>
                             <div class="message received" v-for="(message) in contacts[activeUser].messages"> {{ contacts[activeUser].message}}</div>
-                            <div class="message sent">messaggio 1</div>
                         </div>
                     </div>
                     <div class="send-message-bar">
