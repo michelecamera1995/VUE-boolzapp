@@ -186,6 +186,14 @@ const app = new Vue({
             });
             return (messages.length > 0) ?  messages[messages.length -1].message : ' ' ;
         },
+        getUserMsg(element){
+            const messages = element.map(function (user) {
+                console.log(element)
+                return user.message;
+            });
+        },
     }
 });
  
+
+//
