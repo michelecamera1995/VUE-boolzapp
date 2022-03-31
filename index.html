@@ -41,8 +41,8 @@
                         <a href="">Attiva notifiche desktop</a>
                     </div>
                 </div>
-                <input type="text" placeholder="Cerca o inizia una nuova chat!" >
-                <div class="users-card" v-for="(contact,index) in contacts" @click="setActiveUser(contact)">
+                <input type="text" placeholder="Cerca o inizia una nuova chat!"v-model='searchBar' >
+                <div class="users-card" v-for="(contact,index) in filteredArticles" @click="setActiveUser(contact)">
                     <div class="users-card-left">
                         <img :src="imgURL(contact)" alt="user img">
                         <div>
