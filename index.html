@@ -41,8 +41,8 @@
                         <a href="">Attiva notifiche desktop</a>
                     </div>
                 </div>
-                <input type="text" placeholder="Cerca o inizia una nuova chat!">
-                <div class="users-card" v-for="(contact,index) in contacts" @click="setActiveUser(index)">
+                <input type="text" placeholder="Cerca o inizia una nuova chat!" >
+                <div class="users-card" v-for="(contact,index) in contacts" @click="setActiveUser(contact)">
                     <div class="users-card-left">
                         <img :src="imgURL(contact)" alt="user img">
                         <div>
@@ -59,9 +59,9 @@
             <div id="col-dx" v-if="activeUser !== null" >
                     <div class="top-bar">
                         <div class="avatar-user" >
-                            <img src="img/avatar_1.jpg" alt="user img">
+                            <img :src="'img/avatar' + activeUser.avatar + '.jpg'" :alt="activeUser.name">
                             <div>
-                                <h3>{{contacts[activeUser].name}}</h3>
+                                <h3>{{activeUser.name}}</h3>
                                 <p>ultimo accesso alle 12:30</p>
                             </div>
                         </div>
@@ -73,12 +73,12 @@
                     </div>
                     <div class="chat-container">
                         <div class="chat-sx" >
-                            <div class="message received" v-for="(message) in contacts[activeUser].messages">{{getUserMsg(message)}}</div>
+                            <div class="message"  :class='msgObj.status' v-for="(msgObj) in activeUser.messages">{{msgObj.message}}</div>
                         </div>
                     </div>
                     <div class="send-message-bar">
                         <div><button><i class="fa-solid fa-face-smile"></i></button></div>
-                        <div><input type="text"placeholder='Scrivi un messaggio!'></div>
+                        <div><input type="text"placeholder='Scrivi un messaggio!' @keyUp.enter="addMsg()"></div>
                         <div><button><i class="fa-solid fa-share"></i></button></div>
                     </div>
             </div>

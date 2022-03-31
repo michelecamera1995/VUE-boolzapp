@@ -168,6 +168,7 @@ const app = new Vue({
     el: '#app',
     data: {
         contacts,
+        newMsg: '',
         activeUser: null,
         newListElement:'',
     },
@@ -175,9 +176,9 @@ const app = new Vue({
         imgURL(nome){
             return `img/avatar${nome.avatar}.jpg`;
         },
-        setActiveUser(i){
-            this.activeUser = i;
-            //console.log(this.activeUser)
+        setActiveUser(contact){
+            this.activeUser = contact;
+            console.log(this.activeUser)
         },
         getLastUserMsg(element){
             messages = element.messages;
@@ -186,14 +187,13 @@ const app = new Vue({
             });
             return (messages.length > 0) ?  messages[messages.length -1].message : ' ' ;
         },
-        getUserMsg(element){
-            const messages = element.map(function (user) {
-                console.log(element)
-                return user.message;
-            });
-        },
+        addMsg(){
+            const newMsg=          {
+                    message: this.newMsg,
+            }
+            this.messages.push(newMsg);
+            this.newMsg = '';
+        }
     }
 });
  
-
-//
