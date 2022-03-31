@@ -168,8 +168,8 @@ const app = new Vue({
     el: '#app',
     data: {
         contacts,
-        newMsg: ' ',
-        searchBar: ' ',
+        newMsg: '',
+        searchBar: '',
         activeUser: null,
         newListElement:'',
     },
@@ -210,8 +210,9 @@ const app = new Vue({
     },
     computed:{
         filteredArticles() {
+            this.activeUser=null;
             return this.contacts.filter(item => {
-                return item.name.includes(this.searchBar);
+                return item.name.toLowerCase().includes(this.searchBar.toLowerCase());
             })
         }
     }
