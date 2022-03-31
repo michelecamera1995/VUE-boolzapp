@@ -210,7 +210,7 @@ const app = new Vue({
     },
     computed:{
         filteredArticles() {
-            if (this.searchBar) {
+            if (!this.searchBar) {
                 return this.name;
             }
             return this.contacts.filter(item => {
