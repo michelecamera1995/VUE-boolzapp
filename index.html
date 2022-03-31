@@ -78,7 +78,7 @@
                     </div>
                     <div class="send-message-bar">
                         <div><button><i class="fa-solid fa-face-smile"></i></button></div>
-                        <div><input type="text"placeholder='Scrivi un messaggio!' @keyUp.enter="addMsg()"></div>
+                        <div><input type="text"placeholder='Scrivi un messaggio!' v-model="newMsg" @keyUp.enter="addMsg()"></div>
                         <div><button><i class="fa-solid fa-share"></i></button></div>
                     </div>
             </div>

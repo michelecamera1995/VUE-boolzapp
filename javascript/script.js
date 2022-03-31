@@ -168,7 +168,8 @@ const app = new Vue({
     el: '#app',
     data: {
         contacts,
-        newMsg: '',
+        newMsg: ' ',
+        searchBar: ' ',
         activeUser: null,
         newListElement:'',
     },
@@ -187,13 +188,25 @@ const app = new Vue({
             });
             return (messages.length > 0) ?  messages[messages.length -1].message : ' ' ;
         },
-        addMsg(){
-            const newMsg=          {
+        addMsg(){  
+        if(this.newMsg.length > 0 ){
+            this.activeUser.messages.push(
+                {
                     message: this.newMsg,
-            }
-            this.messages.push(newMsg);
-            this.newMsg = '';
-        }
-    }
+                    status: 'sent',
+                } 
+            );
+            setTimeout(() =>{
+                this.activeUser.messages.push(
+                    {
+                        message: 'ok',
+                        status: 'received',
+                    } 
+                )
+            },1000 )
+        }  
+            this.newMsg = ''
+        },
+    },
 });
  
