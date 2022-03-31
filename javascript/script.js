@@ -210,9 +210,6 @@ const app = new Vue({
     },
     computed:{
         filteredArticles() {
-            if (!this.searchBar) {
-                return this.name;
-            }
             return this.contacts.filter(item => {
                 return item.name.includes(this.searchBar);
             })
